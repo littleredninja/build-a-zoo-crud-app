@@ -20,6 +20,7 @@ post '/users/new' do
 		session[:user_id] = new_user.id
 		redirect ('/zoos')
 	else
+		@error = "I'm sorry, something went wrong!  Please try again."
 		redirect ('/')
 	end
 end

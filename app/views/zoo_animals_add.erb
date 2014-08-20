@@ -5,9 +5,10 @@
 		<input type="text" name="animal[noise]" placeholder="What does your animal say?  i.e. Meow">
 		<input type="text" name="animal[favorite_food]" placeholder="What does your animal like to eat?">
 		<input type="submit" value="Add an animal to your Zoo!">
+	</form>
 
-
-
+	<form action="/zoos/<%=@zoo.id%>/animals" method="GET">
+		<input type="submit" value="Never mind">
 	</form>
 
 
