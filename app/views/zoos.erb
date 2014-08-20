@@ -1,0 +1,21 @@
+<div class="container">
+
+<h1>Your Zoos</h1>
+
+	<% @user.zoos.each do |zoo| %>
+		<li>Name:  <%= zoo.name %>
+			<br>
+			Location: <%= zoo.location %></li>
+			<br>
+		<% end %>
+
+	<form action="/zoos/new" method="GET">
+	<input type="submit" value="Make a Zoo">
+	</form>
+	<form action="/zoos/edit" method="GET">
+	<input type="submit" value="Edit a Zoo">
+	</form>
+
+
+
+</div>
