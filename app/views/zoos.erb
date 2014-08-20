@@ -6,15 +6,28 @@
 		<li>Name:  <%= zoo.name %>
 			<br>
 			Location: <%= zoo.location %></li>
-			<br>
-		<% end %>
+				<br>
+				<form action="/zoos/<%=zoo.id%>/animals" method="GET">
+					<input type="submit" value="Visit this Zoo">
+				</form>
+				
+				<form action="/zoos/<%=zoo.id%>/edit" method="GET">
+					<input type="submit" value="Edit this Zoo">
+				</form>
+
+				<form action="/zoos/<%=zoo.id%>" method="POST">
+					<input type="hidden" value="DELETE" name="_method">
+					<input type="submit" value="Delete this Zoo">
+				</form>
+	
+	<% end %>
 
 	<form action="/zoos/new" method="GET">
 	<input type="submit" value="Make a Zoo">
 	</form>
-	<form action="/zoos/edit" method="GET">
-	<input type="submit" value="Edit a Zoo">
-	</form>
+
+<div class="logout_link"><a href="/logout"> Log Out </a></div>
+
 
 
 

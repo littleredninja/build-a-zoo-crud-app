@@ -1,0 +1,19 @@
+<div class="container">
+
+	<h1>All the Animals in <%= @zoo.name %>!</h1>
+
+	<% @animals.each do |animal| %>
+		<li><%= animal.name %> the <%= animal.species %> says <%= animal.noise %> and likes to eat <%= animal.favorite_food %>.  <%= animal.name %> lives in <%= animal.zoo.name %> in <%= animal.zoo.location %>.</li>
+
+		<form action="/animal/<%=animal.id%>/edit" method="GET">
+			<input type="submit" value="Edit your Animal">
+		</form>
+
+	<% end %>
+
+	<form action="/zoos/<%=@zoo.id%>/animals/new" method="GET">
+		<input type="submit" value="Add a animal">
+	</form>
+
+
+</div>

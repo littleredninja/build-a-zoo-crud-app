@@ -1,0 +1,17 @@
+<div class="container">
+	<form action="/animal/<%=@animal.id%>/edit" method="POST">
+		<input type="hidden" name="_method" value="PUT">
+		<input type="text" name="animal[name]" value="<%= @animal.name%>" placeholder="What is your animal's name?">
+		<input type="text" name="animal[species]" value="<%= @animal.species %>" placeholder="What type of animal is it?">
+		<input type="text" name="animal[noise]" value="<%= @animal.noise %>" placeholder="What does your animal say?  i.e. Meow">
+		<input type="text" name="animal[favorite_food]" value="<%= @animal.favorite_food %>" placeholder="What does your animal like to eat?">
+		<input type="submit" value="Update your Animal!">
+	</form>
+
+	<form action="/animal/<%=@animal.id%>/delete" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete this animal">
+	</form>
+
+
+</div>

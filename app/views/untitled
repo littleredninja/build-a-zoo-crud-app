@@ -1,0 +1,14 @@
+<div class="container">
+	<form action="/zoos/<%=@zoo.id%>/animals" method="POST">
+		<input type="text" name="animal[name]" placeholder="Animal's Name">
+		<input type="text" name="animal[species]" placeholder="Type of Animal, i.e. cat">
+		<input type="text" name="animal[noise]" placeholder="What does your animal say?  i.e. Meow">
+		<input type="text" name="animal[favorite_food]" placeholder="What does your animal like to eat?">
+		<input type="submit" value="Add an animal to your Zoo!">
+
+
+
+	</form>
+
+
+</div>
